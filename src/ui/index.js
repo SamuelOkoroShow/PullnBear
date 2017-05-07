@@ -12,11 +12,14 @@ import {
   View
 } from 'react-native';
 
+import Gender from './maleFemale'
+import Root from './root'
+
 export default class Pull extends Component {
   render() {
     return (
       <View style={styles.container}>
-       
+      <Gender />
       </View>
     );
   }
