@@ -13,13 +13,17 @@ import {
 } from 'react-native';
 
 import Gender from './maleFemale'
+import Hats from './Bear/hats'
 import Root from './root'
 
 export default class Pull extends Component {
+  splash(){
+    return(<View />)
+  }
   render() {
     return (
       <View style={styles.container}>
-      <Gender />
+      <Hats />
       </View>
     );
   }
@@ -41,4 +45,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('Pull', () => Pull);
+

@@ -41,7 +41,7 @@ export default class Pull extends Component {
        <TouchableOpacity style={styles.pull}><Image source ={this.state.pull} resizeMode="contain" style={{width:190}} /></TouchableOpacity>
        <TouchableOpacity style={styles.bear}><Image source ={bear} resizeMode="contain" style={{width:190}} /></TouchableOpacity>
        </View>
-       <View style = {{backgroundColor:'#ff7373', justifyContent:"center", alignItems:'center', height:12}} >
+       <View style = {{backgroundColor:'#ff7373', justifyContent:"center", alignItems:'center', height:13}} >
        <Text style ={{color:'#fff', fontSize:9, fontWeight:'900'}}>Pull&Bear</Text>
        </View>
       </View>
@@ -62,7 +62,9 @@ const styles = StyleSheet.create({
   pull:{
     flex:1,
     justifyContent:'center',
-    alignItems:'center'
+    alignItems:'center',
+    borderRightWidth:1,
+    borderRightColor:'#c0ddb8'
   },  
   bear:{
     flex:1,
@@ -81,4 +83,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('Pull', () => Pull);
+
