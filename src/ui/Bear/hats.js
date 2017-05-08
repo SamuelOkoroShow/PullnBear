@@ -55,6 +55,9 @@ export default class Pull extends Component {
        dataSource = {this.state.dataSource}
        renderRow = {(rowData) => this.eachHat(rowData)}
        />
+      <View style = {{backgroundColor:'#75a870', justifyContent:"center", alignItems:'center', height:13}} >
+       <Text style ={{color:'#fff', fontSize:9, fontWeight:'900'}}>Pull&Bear</Text>
+       </View>
       </View>
     );
   }
