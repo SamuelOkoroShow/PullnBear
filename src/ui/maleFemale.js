@@ -8,13 +8,14 @@ import bear from '../imgs/bear.png'
 import pull1 from '../imgs/pull1.png'
 import pull2 from '../imgs/pull3.png'
 import pull3 from '../imgs/pull2.png'
-import logo from '../imgs/logo.png'
+
 
 import React, { Component } from 'react';
 import {
   AppRegistry,
   StyleSheet,
   Image,
+  LayoutAnimation,
   Text,
   TouchableOpacity,
   View
@@ -24,22 +25,38 @@ export default class Pull extends Component {
   constructor(){
     super()
     this.state = {
-      pull : pull1
+      pull : pull1,
+      height:0
     }
   }
   componentDidMount(){
-    setTimeout(() => {this.setState({pull:pull2})}, 3000)
+    // Layout Animation type
+    
+    //Init Animation
+    setTimeout(() => {this.setState({height:190})}, 1000)
+
+
+    // Animation 1
+    setTimeout(() => {this.setState({height:0})}, 3000)
+    setTimeout(() => {this.setState({pull:pull2})}, 4000)
+    setTimeout(() => {this.setState({height:190})}, 4050)
+
+    //Animation 2
+    setTimeout(() => {this.setState({height:0})}, 6000)
     setTimeout(() => {this.setState({pull:pull3})}, 7000)
+    setTimeout(() => {this.setState({height:190})}, 7050)
+  }
+
+  componentDidUpdate(){
+    LayoutAnimation.spring();
   }
   render() {
     return (
       <View style={styles.container}>
-<View style={{height:70, alignItems:'center', borderBottomWidth:1, borderBottomColor:'#f3f3f3', paddingTop:10, justifyContent:"center"}}>
-<Image source = {logo} resizeMode="contain" style={{width:100}} />
-</View>
+
         <View style={styles.choose}>
-       <TouchableOpacity style={styles.pull}><Image source ={this.state.pull} resizeMode="contain" style={{width:190}} /></TouchableOpacity>
-       <TouchableOpacity style={styles.bear}><Image source ={bear} resizeMode="contain" style={{width:190}} /></TouchableOpacity>
+       <TouchableOpacity style={styles.pull}><Image source ={this.state.pull} resizeMode="contain" style={{width:190, height:this.state.height}} /></TouchableOpacity>
+       <TouchableOpacity style={styles.bear}><Image source ={bear} resizeMode="contain" style={{width:180,}} /></TouchableOpacity>
        </View>
        <View style = {{backgroundColor:'#ff7373', justifyContent:"center", alignItems:'center', height:13}} >
        <Text style ={{color:'#fff', fontSize:9, fontWeight:'900'}}>Pull&Bear</Text>

@@ -38,7 +38,7 @@ export default class Pull extends Component {
   }
 
   eachHat(x){
-    return(<TouchableOpacity style={{width:119, borderRadius:5, margin:3, height:120, alignItems:'center', justifyContent:'center', borderBottomWidth:4, backgroundColor:'rgba(255,255,255,0.8)', padding:5, borderBottomColor:'#ffa5bc'}}>
+    return(<TouchableOpacity style={{width:119, borderRadius:5, margin:3, height:120, alignItems:'center', justifyContent:'center', borderBottomWidth:3, backgroundColor:'rgba(255,255,255,0.7)', padding:5, borderBottomColor:'#ffa5bc'}}>
       <Image source ={x} resizeMode='contain' style={{width:100, height:100}} />
       </TouchableOpacity>)
   }
@@ -47,9 +47,6 @@ export default class Pull extends Component {
 
     return (
       <Image source={back} resizeMode='cover' style={styles.container}>
-      <View style={{height:70, backgroundColor:'#ffff', alignItems:'center', borderBottomWidth:3, borderBottomColor:'#a5b8ff', paddingTop:10, marginBottom:3, justifyContent:"center"}}>
-<Image source = {logo} resizeMode="contain" style={{width:100}} />
-</View>
        <ListView 
        contentContainerStyle ={{flex:1, flexWrap:'wrap',}}
        horizontal ={true}
