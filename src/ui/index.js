@@ -23,7 +23,7 @@ export default class Pull extends Component {
   render() {
     return (
       <View style={styles.container}>
-      <Hats />
+      <Gender />
       </View>
     );
   }

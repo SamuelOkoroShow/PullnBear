@@ -10,6 +10,7 @@ import hat2 from '../../imgs/hat2.png'
 import hat3 from '../../imgs/hat3.png'
 import hat4 from '../../imgs/hat4.png'
 import logo from '../../imgs/logo.png'
+import back from '../../imgs/back1.jpg'
 
 import {
   AppRegistry,
@@ -37,7 +38,7 @@ export default class Pull extends Component {
   }
 
   eachHat(x){
-    return(<TouchableOpacity style={{width:120, borderRadius:5, margin:2, height:120, alignItems:'center', justifyContent:'center', borderBottomWidth:3, backgroundColor:'#fff', padding:5, borderBottomColor:'#ffa5bc'}}>
+    return(<TouchableOpacity style={{width:119, borderRadius:5, margin:3, height:120, alignItems:'center', justifyContent:'center', borderBottomWidth:4, backgroundColor:'rgba(255,255,255,0.8)', padding:5, borderBottomColor:'#ffa5bc'}}>
       <Image source ={x} resizeMode='contain' style={{width:100, height:100}} />
       </TouchableOpacity>)
   }
@@ -45,7 +46,7 @@ export default class Pull extends Component {
   render() {
 
     return (
-      <View style={styles.container}>
+      <Image source={back} resizeMode='cover' style={styles.container}>
       <View style={{height:70, backgroundColor:'#ffff', alignItems:'center', borderBottomWidth:3, borderBottomColor:'#a5b8ff', paddingTop:10, marginBottom:3, justifyContent:"center"}}>
 <Image source = {logo} resizeMode="contain" style={{width:100}} />
 </View>
@@ -58,7 +59,7 @@ export default class Pull extends Component {
       <View style = {{backgroundColor:'#75a870', justifyContent:"center", alignItems:'center', height:13}} >
        <Text style ={{color:'#fff', fontSize:9, fontWeight:'900'}}>Pull&Bear</Text>
        </View>
-      </View>
+      </Image>
     );
   }
 }
@@ -66,6 +67,8 @@ export default class Pull extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    width:null,
+    height:null,
     backgroundColor:'#f1f1f1'
   },
   title:{
