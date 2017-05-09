@@ -29,7 +29,7 @@ export default class Pull extends Component {
       <View style={{height:70, alignItems:'center', borderBottomWidth:1, borderBottomColor:'#f3f3f3', paddingTop:10, justifyContent:"center"}}>
 <Image source = {logo} resizeMode="contain" style={{width:100,}} />
 </View>
-      <Hats />
+      <Msc />
       </View>
     );
   }
